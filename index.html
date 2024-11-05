@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBTI 성격 검사</title>
+  <!-- 부트스트랩 CSS 링크 -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">MBTI 성격 검사</h1>
+    <form id="mbti-form">
+      <div class="card">
+        <div class="card-body">
+          <div class="question mb-3">
+            <p>1. 나는 혼자 있는 시간을 즐긴다.</p>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q1" value="I" id="q1_1">
+              <label class="form-check-label" for="q1_1">네</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q1" value="E" id="q1_2">
+              <label class="form-check-label" for="q1_2">아니오</label>
+            </div>
+          </div>
+
+          <div class="question mb-3">
+            <p>2. 나는 새로운 사람과 빠르게 친해진다.</p>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q2" value="E" id="q2_1">
+              <label class="form-check-label" for="q2_1">네</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q2" value="I" id="q2_2">
+              <label class="form-check-label" for="q2_2">아니오</label>
+            </div>
+          </div>
+
+          <div class="question mb-3">
+            <p>3. 나는 계획을 세우는 것을 선호한다.</p>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q3" value="J" id="q3_1">
+              <label class="form-check-label" for="q3_1">네</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q3" value="P" id="q3_2">
+              <label class="form-check-label" for="q3_2">아니오</label>
+            </div>
+          </div>
+
+          <div class="question mb-3">
+            <p>4. 나는 즉흥적인 결정을 내리는 것을 좋아한다.</p>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q4" value="P" id="q4_1">
+              <label class="form-check-label" for="q4_1">네</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q4" value="J" id="q4_2">
+              <label class="form-check-label" for="q4_2">아니오</label>
+            </div>
+          </div>
+
+          <div class="question mb-3">
+            <p>5. 나는 사실적인 정보를 선호한다.</p>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q5" value="S" id="q5_1">
+              <label class="form-check-label" for="q5_1">네</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q5" value="N" id="q5_2">
+              <label class="form-check-label" for="q5_2">아니오</label>
+            </div>
+          </div>
+
+          <div class="question mb-3">
+            <p>6. 나는 직관을 더 믿고 의존하는 편이다.</p>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q6" value="N" id="q6_1">
+              <label class="form-check-label" for="q6_1">네</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q6" value="S" id="q6_2">
+              <label class="form-check-label" for="q6_2">아니오</label>
+            </div>
+          </div>
+
+          <div class="question mb-3">
+            <p>7. 나는 감정을 중요시한다.</p>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q7" value="F" id="q7_1">
+              <label class="form-check-label" for="q7_1">네</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q7" value="T" id="q7_2">
+              <label class="form-check-label" for="q7_2">아니오</label>
+            </div>
+          </div>
+
+          <div class="question mb-3">
+            <p>8. 나는 논리적이고 분석적인 결정을 선호한다.</p>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q8" value="T" id="q8_1">
+              <label class="form-check-label" for="q8_1">네</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q8" value="F" id="q8_2">
+              <label class="form-check-label" for="q8_2">아니오</label>
+            </div>
+          </div>
+
+          <div class="question mb-3">
+            <p>9. 나는 일관성 있는 규칙과 절차를 따르는 것을 좋아한다.</p>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q9" value="J" id="q9_1">
+              <label class="form-check-label" for="q9_1">네</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q9" value="P" id="q9_2">
+              <label class="form-check-label" for="q9_2">아니오</label>
+            </div>
+          </div>
+
+          <div class="question mb-3">
+            <p>10. 나는 새로운 경험을 하는 것을 좋아한다.</p>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q10" value="P" id="q10_1">
+              <label class="form-check-label" for="q10_1">네</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="q10" value="J" id="q10_2">
+              <label class="form-check-label" for="q10_2">아니오</label>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary btn-block" onclick="submitForm()">결과 보기</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- 부트스트랩 JS, Popper.js, jQuery 링크 -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

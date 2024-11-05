@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBTI 결과</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">당신의 MBTI</h1>
+    <div id="result" class="text-center display-4"></div>
+
+    <p class="text-center">아래는 각 MBTI 유형에 대한 간략한 설명입니다.</p>
+    <ul id="description" class="list-group">
+      <!-- 설명은 자바스크립트에서 동적으로 추가될 예정 -->
+    </ul>
+
+    <div class="text-center mt-4">
+      <a href="index.html" class="btn btn-secondary">다시 검사하기</a>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const mbtiType = urlParams.get('type');
+
+    const resultText = {
+      ENFJ: '사교적이고, 사람들을 이끄는 리더형.',
+      ENFP: '창의적이고, 열정적인 사람들.',
+      // 각 유형별 특징을 여기에 추가
+    };
+
+    const descriptionText = {
+      E: '외향적인 성격으로, 사람들과의 교류를 선호합니다.',
+      I: '내향적인 성격으로, 혼자 있는 시간을 좋아합니다.',
+      S: '구체적이고 실용적인 정보를 선호합니다.',
+      N: '추상적이고 직관적인 접근을 선호합니다.',
+      T: '논리적이고 분석적인 사고를 합니다.',
+      F: '감정을 중시하고, 사람 중심의 사고를 합니다.',
+      J: '계획적이고 체계적인 성격을 가집니다.',
+      P: '유연하고 즉흥적인 성격을 가집니다.',
+    };
+
+    document.getElementById('result').textContent = `당신의 MBTI 유형은 ${mbtiType}입니다.`;
+
+    // MBTI 유형에 대한 설명 추가
+    const descriptions = [];
+    for (const letter of mbtiType) {
+      descriptions.push(descriptionText[letter]);
+    }
+
+    const descriptionList = document.getElementById('description');
+    descriptions.forEach(desc => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('list-group-item');
+      listItem.textContent = desc;
+      descriptionList.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>
